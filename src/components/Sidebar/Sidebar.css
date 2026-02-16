@@ -22,13 +22,11 @@
   width: 70px;
 }
 
-/* Top */
 .sidebar .top {
   padding: 20px;
   padding-bottom: 10px;
 }
 
-/* New Chat / Recent / Bottom Items (FULL ROW GREY BOX) */
 .sidebar .new-chat,
 .sidebar .recent-entry,
 .sidebar .bottom-item {
@@ -38,7 +36,7 @@
   padding: 10px 12px;
   border-radius: 12px;
   cursor: pointer;
-  background: rgba(255, 255, 255, 0.08);   /* grey box behind icon + text */
+  background: rgba(255, 255, 255, 0.08);  
   transition: background 0.2s ease, box-shadow 0.2s ease;
   margin-bottom: 6px;
 }
@@ -49,14 +47,12 @@
   background: rgba(255, 255, 255, 0.14);
 }
 
-/* Active (clicked) row */
 .sidebar .active,
 .sidebar .active-item {
   background: rgba(79, 172, 254, 0.18);
   box-shadow: 0 0 0 1px rgba(79, 172, 254, 0.35);
 }
 
-/* Recent section */
 .sidebar .recent {
   margin-top: 16px;
   padding: 0 20px;
@@ -72,27 +68,23 @@
   margin: 12px 0 8px;
 }
 
-/* Text */
 .sidebar p {
   color: #ffffff;
   font-size: 14px;
 }
 
-/* No history text */
 .sidebar .no-chat {
   color: #777;
   font-size: 13px;
   margin-top: 8px;
 }
 
-/* Bottom */
 .sidebar .bottom {
   margin-top: auto;
   padding: 20px;
   padding-bottom: 30px;
 }
 
-/* Collapsed state */
 .sidebar.closed p,
 .sidebar.closed .title {
   display: none;
@@ -104,14 +96,12 @@
   justify-content: center;
 }
 
-/* Icons (simple, no bubble) */
 .sidebar img {
   width: 20px;
   height: 20px;
   opacity: 0.9;
 }
 
-/* Optional: icon hover micro animation */
 .sidebar .new-chat:hover img,
 .sidebar .recent-entry:hover img,
 .sidebar .bottom-item:hover img {
