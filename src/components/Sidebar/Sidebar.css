@@ -1,0 +1,119 @@
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  background: #0f0f0f;
+  color: #ffffff;
+  border-right: 1px solid rgba(255, 255, 255, 0.06);
+  box-shadow: 4px 0 20px rgba(0, 0, 0, 0.6);
+  overflow: hidden;
+  transition: width 0.3s ease;
+  z-index: 100;
+  display: flex;
+  flex-direction: column;
+}
+
+.sidebar.open {
+  width: 260px;
+}
+
+.sidebar.closed {
+  width: 70px;
+}
+
+/* Top */
+.sidebar .top {
+  padding: 20px;
+  padding-bottom: 10px;
+}
+
+/* New Chat / Recent / Bottom Items (FULL ROW GREY BOX) */
+.sidebar .new-chat,
+.sidebar .recent-entry,
+.sidebar .bottom-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 12px;
+  border-radius: 12px;
+  cursor: pointer;
+  background: rgba(255, 255, 255, 0.08);   /* grey box behind icon + text */
+  transition: background 0.2s ease, box-shadow 0.2s ease;
+  margin-bottom: 6px;
+}
+
+.sidebar .new-chat:hover,
+.sidebar .recent-entry:hover,
+.sidebar .bottom-item:hover {
+  background: rgba(255, 255, 255, 0.14);
+}
+
+/* Active (clicked) row */
+.sidebar .active,
+.sidebar .active-item {
+  background: rgba(79, 172, 254, 0.18);
+  box-shadow: 0 0 0 1px rgba(79, 172, 254, 0.35);
+}
+
+/* Recent section */
+.sidebar .recent {
+  margin-top: 16px;
+  padding: 0 20px;
+  flex: 1;
+  overflow-y: auto;
+}
+
+.sidebar .title {
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: #aaa;
+  margin: 12px 0 8px;
+}
+
+/* Text */
+.sidebar p {
+  color: #ffffff;
+  font-size: 14px;
+}
+
+/* No history text */
+.sidebar .no-chat {
+  color: #777;
+  font-size: 13px;
+  margin-top: 8px;
+}
+
+/* Bottom */
+.sidebar .bottom {
+  margin-top: auto;
+  padding: 20px;
+  padding-bottom: 30px;
+}
+
+/* Collapsed state */
+.sidebar.closed p,
+.sidebar.closed .title {
+  display: none;
+}
+
+.sidebar.closed .new-chat,
+.sidebar.closed .recent-entry,
+.sidebar.closed .bottom-item {
+  justify-content: center;
+}
+
+/* Icons (simple, no bubble) */
+.sidebar img {
+  width: 20px;
+  height: 20px;
+  opacity: 0.9;
+}
+
+/* Optional: icon hover micro animation */
+.sidebar .new-chat:hover img,
+.sidebar .recent-entry:hover img,
+.sidebar .bottom-item:hover img {
+  opacity: 1;
+}
