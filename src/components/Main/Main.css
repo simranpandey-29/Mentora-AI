@@ -5,18 +5,17 @@
   color: #eaeaea;
   position: relative;
   overflow: hidden;
-  margin-left: 260px; /* default when sidebar open */
+  margin-left: 260px; 
   transition: margin-left 0.3s ease;
 }
 
-/* When sidebar is closed */
+
 .sidebar.closed ~ .main {
   margin-left: 70px;
 }
 
-/* Top Nav */
 .nav {
-  height: 70px; /* fixed height so layout calculations work */
+  height: 70px; 
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -30,24 +29,21 @@
   border-radius: 50%;
 }
 
-/* Main Container */
 .main-container {
   max-width: 900px;
   margin: 0 auto;
-  height: calc(100vh - 70px); /* viewport minus nav */
+  height: calc(100vh - 70px);
   padding: 20px 20px 0;
   display: flex;
   flex-direction: column;
 }
 
-/* Chat Messages Area */
 .result {
   flex: 1;
   overflow-y: auto;
   padding: 10px 10px 20px;
 }
 
-/* Chat Messages */
 .user-msg,
 .ai-msg {
   display: flex;
@@ -80,7 +76,6 @@
   border-color: rgba(79, 172, 254, 0.3);
 }
 
-/* Input Bar Wrapper */
 .main-bottom {
   position: sticky;
   bottom: 0;
@@ -90,7 +85,6 @@
   border-top: 1px solid rgba(255,255,255,0.06);
 }
 
-/* Input Bar */
 .search-box {
   display: flex;
   align-items: center;
@@ -128,7 +122,6 @@
   opacity: 1;
 }
 
-/* Bottom info */
 .bottom-info {
   text-align: center;
   font-size: 12px;
@@ -136,7 +129,6 @@
   color: #aaa;
 }
 
-/* Empty State */
 .empty-state {
   text-align: center;
   margin-top: 80px;
