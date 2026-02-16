@@ -9,6 +9,6 @@
 
 #root {
   min-height: 100vh;
-  display: flex;          /* Sidebar left, Main right */
-  background: #121212;   /* light black background */
+  display: flex;         
+  background: #121212;  
 }
