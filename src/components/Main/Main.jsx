@@ -10,12 +10,10 @@ const Main = () => {
   const fileInputRef = useRef(null);
   const recognitionRef = useRef(null);
 
-  // Auto scroll to bottom when new messages arrive
   useEffect(() => {
     bottomRef.current?.scrollIntoView({ behavior: "smooth" });
   }, [messages, loading]);
 
-  // Setup speech recognition (mic)
   useEffect(() => {
     const SpeechRecognition =
       window.SpeechRecognition || window.webkitSpeechRecognition;
@@ -38,8 +36,7 @@ const Main = () => {
       recognitionRef.current = recognition;
     }
   }, [setInput]);
-
-  // Handlers
+  
   const handleImageClick = () => {
     fileInputRef.current?.click();
   };
@@ -48,7 +45,6 @@ const Main = () => {
     const file = e.target.files[0];
     if (!file) return;
 
-    // For now, just append file name to input
     setInput((prev) => (prev ? prev + ` [Attached: ${file.name}]` : `[Attached: ${file.name}]`));
   };
 
